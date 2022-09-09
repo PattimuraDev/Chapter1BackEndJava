@@ -51,6 +51,12 @@ public class TopicEmpat {
         System.out.println(comp1 == comp2 && log1 != log2);
 
         System.out.println("=== conditional ===");
+        kondisionalIfElse();
+        kondisionalSwitchCase();
+        perulangan();
+    }
+
+    public static void kondisionalIfElse(){
         int valA = 5;
         int valB = 6;
         // conditional if else biasa
@@ -67,7 +73,9 @@ public class TopicEmpat {
 
         // ternary operator
         System.out.println(valA < valB ? "valA kurang dari valB" : "valA lebih dari valB");
+    }
 
+    public static void kondisionalSwitchCase(){
         // switch case
         String nilai = "D";
         switch (nilai){
@@ -81,7 +89,9 @@ public class TopicEmpat {
                 System.out.println("ERROR ini apa");
                 break;
         }
+    }
 
+    public static void perulangan(){
         // perulangan for
         int[] data = {11, 2, 3, 90, 43, 23, 12};
         for (int i = 0; i < data.length; i++){
@@ -103,5 +113,13 @@ public class TopicEmpat {
             System.out.print(data[index] + " ");
             index++;
         }while (index < data.length);
+    }
+
+    public static int recursionLoop(int k){
+        if(k > 0){
+            return k + recursionLoop(k - 1);
+        }else{
+            return 0;
+        }
     }
 }
